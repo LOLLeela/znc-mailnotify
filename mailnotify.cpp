@@ -611,9 +611,10 @@ class CNotifoMod : public CModule
 				CString title = "Private Message";
 				CString msg = "From " + nick.GetNick();
 				msg += ": " + message;
-
-				bool sent = send_message(msg, title, nick.GetNick());
+				
+				send_message(msg, title, nick.GetNick());
 				/**
+				bool sent = send_message(msg, title, nick.GetNick());
  				if (sent) {
 					PutIRC("PRIVMSG " + nick.GetNick() + " : [znc] User not connected. Notification message sent.");
 				} else {
